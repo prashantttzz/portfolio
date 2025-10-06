@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 
 export function Sidebar() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/prashanttc", label: "GitHub" },
+    { icon: Github, href: "https://github.com/prashantttzz", label: "GitHub" },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/in/prashantt-chouhan/",
