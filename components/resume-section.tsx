@@ -1,62 +1,49 @@
-"use client"
+"use client";
 
-import {  GraduationCap, Heart, Users, Calendar, MapPin, Trophy } from "lucide-react"
-import { motion } from "framer-motion"
+import {
+  GraduationCap,
+  Heart,
+  Users,
+  Calendar,
+  MapPin,
+  Trophy,
+  Briefcase,
+} from "lucide-react";
+import { motion } from "framer-motion";
 
 export function ResumeSection() {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
-      type: "Full-time",
-      description: "Leading development of scalable web applications and mentoring junior developers.",
-      achievements: [
-        "Increased application performance by 40%",
-        "Led team of 5 developers on major releases",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-      ],
-      technologies: ["React", "Node.js", "AWS", "Docker"],
-    },
-    {
       title: "Frontend Developer",
-      company: "Digital Innovations Inc",
+      company: "Sida Technologies",
       location: "Remote",
-      period: "2020 - 2022",
-      type: "Full-time",
-      description: "Developed responsive web applications with focus on user experience.",
+      period: "oct 2025 - present",
+      type: "part time",
+      description:
+        "Maintaining and optimizing a large-scale Next.js admin dashboard used by clients for product and order management.",
       achievements: [
-        "Built 15+ responsive web applications",
-        "Improved user engagement by 35%",
-        "Integrated payment systems and APIs",
+        "Manage responsive admin dashboard",
+        "Integrated new components to enhance data visualization and workflow.",
+        "Improved performance through efficient state management, API caching, and UI refactoring.",
       ],
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
+      technologies: ["NextJs", "TypeScript", "Tailwind CSS"],
     },
-    {
-      title: "Junior Web Developer",
-      company: "StartupHub",
-      location: "Austin, TX",
-      period: "2019 - 2020",
-      type: "Full-time",
-      description: "Worked on diverse client projects from e-commerce to corporate websites.",
-      achievements: [
-        "Delivered 20+ client projects on time",
-        "Contributed to open-source projects",
-        "Learned modern web development practices",
-      ],
-      technologies: ["JavaScript", "HTML/CSS", "PHP"],
-    },
-  ]
+  ];
 
   const education = [
     {
-      degree: "Bachelor of Technology in Artificial Intelligence and Data Science",
+      degree:
+        "Bachelor of Technology in Artificial Intelligence and Data Science",
       school: "Chameli Devi Group of Institution, Indore",
       location: "indore, mp",
       period: "2022 - 2026",
       description: "Focused on software engineering and web technologies.",
-      coursework: ["Data Structures", "Algorithms", "Software Engineering", "Artificial Intelligence"],
+      coursework: [
+        "Data Structures",
+        "Algorithms",
+        "Software Engineering",
+        "Artificial Intelligence",
+      ],
     },
     {
       degree: "12th",
@@ -65,7 +52,7 @@ export function ResumeSection() {
       period: "2022-2023",
       description: "12th standard with science stream.",
     },
-  ]
+  ];
 
   const volunteerWork = [
     {
@@ -84,14 +71,15 @@ export function ResumeSection() {
       description: "part of technical team of eds club.",
       skills: ["Web development", "Volunteer Management", "Technical skills"],
     },
-  ]
+  ];
 
   const extraRoles = [
     {
       title: "Open Source Contributor",
       project: "React Ecosystem",
       period: "2020 - Present",
-      description: "Contributing to various React libraries and maintaining personal projects.",
+      description:
+        "Contributing to various React libraries and maintaining personal projects.",
       contributions: [
         "500+ GitHub contributions annually",
         "Maintained 3 popular npm packages",
@@ -103,11 +91,16 @@ export function ResumeSection() {
       title: "Technical Writer",
       platform: "Dev.to & Medium",
       period: "2021 - Present",
-      description: "Writing technical articles about web development and best practices.",
-      contributions: ["Published 25+ technical articles", "50K+ total article views", "Featured in weekly newsletters"],
+      description:
+        "Writing technical articles about web development and best practices.",
+      contributions: [
+        "Published 25+ technical articles",
+        "50K+ total article views",
+        "Featured in weekly newsletters",
+      ],
       technologies: ["Technical Writing", "Documentation"],
     },
-  ]
+  ];
 
   const container = {
     hidden: { opacity: 0 },
@@ -117,16 +110,20 @@ export function ResumeSection() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
-  }
+  };
 
   return (
     <div className="max-w-5xl">
-      <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h1 className="text-3xl lg:text-4xl font-heading font-semibold mb-3">
           Professional <span className="text-accent">Resume</span>
         </h1>
@@ -135,18 +132,31 @@ export function ResumeSection() {
 
       <div className="space-y-16">
         {/* Professional Experience */}
-        {/* <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
           <div className="flex items-center mb-8">
             <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center mr-4">
               <Briefcase className="w-5 h-5 text-accent" />
             </div>
             <div>
-              <h2 className="text-xl font-heading font-medium">Professional Experience</h2>
-              <p className="text-xs text-gray-400">Full-time positions and career progression</p>
+              <h2 className="text-xl font-heading font-medium">
+                Professional Experience
+              </h2>
+              <p className="text-xs text-gray-400">
+                Full-time positions and career progression
+              </p>
             </div>
           </div>
 
-          <motion.div className="space-y-6" variants={container} initial="hidden" animate="show">
+          <motion.div
+            className="space-y-6"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -181,7 +191,10 @@ export function ResumeSection() {
                     </h4>
                     <div className="space-y-2">
                       {exp.achievements.map((achievement, idx) => (
-                        <div key={idx} className="flex items-start text-xs text-gray-300">
+                        <div
+                          key={idx}
+                          className="flex items-start text-xs text-gray-300"
+                        >
                           <div className="w-1 h-1 bg-accent rounded-full mt-2 mr-3 flex-shrink-0" />
                           <span>{achievement}</span>
                         </div>
@@ -208,21 +221,32 @@ export function ResumeSection() {
               </motion.div>
             ))}
           </motion.div>
-        </motion.section> */}
+        </motion.section>
 
         {/* Education */}
-        <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
           <div className="flex items-center mb-8">
             <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center mr-4">
               <GraduationCap className="w-5 h-5 text-accent" />
             </div>
             <div>
               <h2 className="text-xl font-heading font-medium">Education</h2>
-              <p className="text-xs text-gray-400">Academic background and certifications</p>
+              <p className="text-xs text-gray-400">
+                Academic background and certifications
+              </p>
             </div>
           </div>
 
-          <motion.div className="space-y-6" variants={container} initial="hidden" animate="show">
+          <motion.div
+            className="space-y-6"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
             {education.map((edu, index) => (
               <motion.div
                 key={index}
@@ -233,7 +257,9 @@ export function ResumeSection() {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-lg font-medium mb-1">{edu.degree}</h3>
-                    <div className="text-accent text-sm font-medium mb-2">{edu.school}</div>
+                    <div className="text-accent text-sm font-medium mb-2">
+                      {edu.school}
+                    </div>
                     <div className="flex items-center text-xs text-gray-400 mb-3">
                       <Calendar className="w-3 h-3 mr-1" />
                       <span className="mr-3">{edu.period}</span>
@@ -246,13 +272,19 @@ export function ResumeSection() {
                 <p className="text-sm text-gray-300 mb-4">{edu.description}</p>
 
                 <div>
-                  <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">Key Coursework</h4>
+                  <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
+                    Key Coursework
+                  </h4>
                   <div className="flex flex-wrap gap-1.5">
-                    {edu.coursework && edu.coursework.map((course, idx) => (
-                      <span key={idx} className="bg-[#2a2a2a] text-gray-300 px-2 py-1 rounded-full text-xs">
-                        {course}
-                      </span>
-                    ))}
+                    {edu.coursework &&
+                      edu.coursework.map((course, idx) => (
+                        <span
+                          key={idx}
+                          className="bg-[#2a2a2a] text-gray-300 px-2 py-1 rounded-full text-xs"
+                        >
+                          {course}
+                        </span>
+                      ))}
                   </div>
                 </div>
               </motion.div>
@@ -261,18 +293,31 @@ export function ResumeSection() {
         </motion.section>
 
         {/* Volunteer Work */}
-        <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+        >
           <div className="flex items-center mb-8">
             <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center mr-4">
               <Heart className="w-5 h-5 text-accent" />
             </div>
             <div>
-              <h2 className="text-xl font-heading font-medium">Volunteer Work</h2>
-              <p className="text-xs text-gray-400">Community involvement and social impact</p>
+              <h2 className="text-xl font-heading font-medium">
+                Volunteer Work
+              </h2>
+              <p className="text-xs text-gray-400">
+                Community involvement and social impact
+              </p>
             </div>
           </div>
 
-          <motion.div className="space-y-6" variants={container} initial="hidden" animate="show">
+          <motion.div
+            className="space-y-6"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
             {volunteerWork.map((vol, index) => (
               <motion.div
                 key={index}
@@ -283,7 +328,9 @@ export function ResumeSection() {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-lg font-medium mb-1">{vol.title}</h3>
-                    <div className="text-accent text-sm font-medium mb-2">{vol.organization}</div>
+                    <div className="text-accent text-sm font-medium mb-2">
+                      {vol.organization}
+                    </div>
                     <div className="flex items-center text-xs text-gray-400 mb-3">
                       <Calendar className="w-3 h-3 mr-1" />
                       <span className="mr-3">{vol.period}</span>
@@ -296,13 +343,16 @@ export function ResumeSection() {
                 <p className="text-sm text-gray-300 mb-4">{vol.description}</p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-             
-
                   <div>
-                    <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">Skills Applied</h4>
+                    <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
+                      Skills Applied
+                    </h4>
                     <div className="flex flex-wrap gap-1.5">
                       {vol.skills.map((skill, idx) => (
-                        <span key={idx} className="bg-[#2a2a2a] text-gray-300 px-2 py-1 rounded-full text-xs">
+                        <span
+                          key={idx}
+                          className="bg-[#2a2a2a] text-gray-300 px-2 py-1 rounded-full text-xs"
+                        >
                           {skill}
                         </span>
                       ))}
@@ -382,5 +432,5 @@ export function ResumeSection() {
         </motion.section> */}
       </div>
     </div>
-  )
+  );
 }

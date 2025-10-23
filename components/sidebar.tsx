@@ -126,7 +126,7 @@ export function Sidebar() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
       >
-        <a href="/web developer resume.pdf" download className="flex">
+        <a href="/prashant chouhan.pdf" download className="flex">
           <Download className="w-4 h-4 mr-2" />
           Download Resume
         </a>
