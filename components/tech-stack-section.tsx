@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion, AnimatePresence } from "framer-motion"
-import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export function TechStackSection() {
   const technologies = [
@@ -110,10 +110,9 @@ export function TechStackSection() {
       level: "Advance",
       proficiency: 85,
     },
+  ];
 
-  ]
-
-  const [activeCategory, setActiveCategory] = useState("all")
+  const [activeCategory, setActiveCategory] = useState("all");
 
   const categories = [
     { id: "all", label: "All Technologies" },
@@ -124,23 +123,25 @@ export function TechStackSection() {
     { id: "devops", label: "DevOps" },
     { id: "tools", label: "Tools" },
     { id: "design", label: "Design" },
-  ]
+  ];
 
   const filteredTech =
-    activeCategory === "all" ? technologies : technologies.filter((tech) => tech.category === activeCategory)
+    activeCategory === "all"
+      ? technologies
+      : technologies.filter((tech) => tech.category === activeCategory);
 
   const getLevelColor = (level: string) => {
     switch (level) {
       case "Expert":
-        return "text-emerald-400"
+        return "text-emerald-400";
       case "Advanced":
-        return "text-blue-400"
+        return "text-blue-400";
       case "Intermediate":
-        return "text-amber-400"
+        return "text-amber-400";
       default:
-        return "text-gray-400"
+        return "text-gray-400";
     }
-  }
+  };
 
   const container = {
     hidden: { opacity: 0 },
@@ -150,16 +151,20 @@ export function TechStackSection() {
         staggerChildren: 0.05,
       },
     },
-  }
+  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
-  }
+  };
 
   return (
     <div className="max-w-5xl">
-      <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h1 className="text-3xl lg:text-4xl font-heading font-semibold mb-3">
           Tech <span className="text-accent">Stack</span>
         </h1>
@@ -205,30 +210,37 @@ export function TechStackSection() {
           {filteredTech.map((tech) => (
             <motion.div
               key={tech.name}
-              className="group bg-[#1a1a1a]/60 backdrop-blur-sm rounded-2xl p-6 border border-[#2a2a2a]/50 hover:border-accent/30 transition-all"
+              className="group !bg-[#1a1a1a]/60 backdrop-blur-sm rounded-2xl p-6 glass transition-all"
               variants={item}
               whileHover={{
                 y: -8,
-                boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.3)",
               }}
             >
               {/* Icon and Name */}
-              <div className="flex items-center mb-4">
+              <div className="flex items-center ">
                 <div className="w-12 h-12 flex items-center justify-center mr-4">
                   <img
                     src={tech.icon || "/placeholder.svg"}
                     alt={tech.name}
-                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                    className="w-15 h-15 object-contain group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-sm mb-1 group-hover:text-accent transition-colors">{tech.name}</h3>
-                  <span className={`text-xs font-medium ${getLevelColor(tech.level)}`}>{tech.level}</span>
+                  <h3 className="font-medium text-sm mb-1 group-hover:text-accent transition-colors">
+                    {tech.name}
+                  </h3>
+                  <span
+                    className={`text-xs font-medium ${getLevelColor(
+                      tech.level
+                    )}`}
+                  >
+                    {tech.level}
+                  </span>
                 </div>
               </div>
 
               {/* Proficiency Bar */}
-              <div className="mb-2">
+              {/* <div className="mb-2">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-xs text-gray-400">Proficiency</span>
                   <span className="text-xs text-accent font-medium">{tech.proficiency}%</span>
@@ -241,11 +253,11 @@ export function TechStackSection() {
                     transition={{ duration: 1, delay: 0.3 }}
                   />
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </motion.div>
       </AnimatePresence>
     </div>
-  )
+  );
 }

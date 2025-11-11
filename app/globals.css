@@ -28,11 +28,12 @@
   border-color: hsl(var(--border));
 }
 
-body {
+html,body {
   color: hsl(var(--foreground));
   background: hsl(var(--background));
   font-feature-settings: "rlig" 1, "calt" 1;
 }
+
 
 @layer base {
   .font-heading {
@@ -68,4 +69,48 @@ body {
 ::selection {
   background-color: rgba(255, 194, 84, 0.3);
   color: white;
+}
+
+  
+.glass {
+  background: linear-gradient(
+    145deg,
+    rgba(30, 30, 30, 0.9) 0%,
+    rgba(15, 15, 15, 0.8) 100%
+  );
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.6),          /* strong outer depth */
+    0 4px 12px rgba(0, 0, 0, 0.4),          /* softer lower layer */
+    inset 2px 2px 6px rgba(255, 255, 255, 0.1), /* top-left glow */
+    inset -2px -2px 6px rgba(0, 0, 0, 0.4); /* bottom-right shadow */
+}
+  
+.glass-button {
+  background: linear-gradient(
+    145deg,
+    rgba(30, 30, 30, 0.9) 0%,
+    rgba(45, 45, 45, 0.734) 100%
+  );
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),          /* softer lower layer */
+    inset 2px 2px 3px rgba(255, 255, 255, 0.1), /* top-left glow */
+    inset -2px -2px 3px rgba(0, 0, 0, 0.2); /* bottom-right shadow */
+}
+
+.glass:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.7),
+    0 6px 16px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 8px rgba(255, 255, 255, 0.15),
+    inset -2px -2px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
 }

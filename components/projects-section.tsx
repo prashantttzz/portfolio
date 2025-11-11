@@ -34,8 +34,8 @@ export function ProjectsSection() {
     show: { opacity: 1, y: 0 },
   };
   const router = useRouter();
-  const handleclick = (id:number) => {
-router.push(`/project/${id}`)
+  const handleclick = (id: number) => {
+    router.push(`/project/${id}`);
   };
   return (
     <div>
@@ -89,8 +89,8 @@ router.push(`/project/${id}`)
           {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
-onClick={()=>handleclick(project.id)}
-              className="group relative bg-[#222222]/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-transparent hover:border-accent/20 transition-all"
+              onClick={() => handleclick(project.id)}
+              className="group relative !bg-[#2b2b2b] glass  rounded-2xl overflow-hidden transition-all"
               variants={item}
               whileHover={{ y: -8 }}
               onHoverStart={() => setHoveredProject(project.id)}
@@ -155,7 +155,7 @@ onClick={()=>handleclick(project.id)}
                 </AnimatePresence>
               </div>
 
-              <div className="p-5">
+              <div className="p-5 flex flex-col gap-3">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-accent text-xs font-medium bg-accent/10 px-2 py-1 rounded-full">
                     {project.category}
@@ -170,11 +170,11 @@ onClick={()=>handleclick(project.id)}
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap items-center gap-1.5">
                   {project.technologies.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs bg-[#2a2a2a] text-gray-300 px-2 py-0.5 rounded-full"
+                      className="text-xs glass-button text-white px-2 py-0.5 rounded-full"
                     >
                       {tech}
                     </span>

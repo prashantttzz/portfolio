@@ -1,6 +1,45 @@
 export const projects = [
   {
-    id: 1,
+  id: 1,
+  title: "ConvoDesk AI – Automated Customer Support System",
+  category: "SaaS Platform",
+  description:
+    "A multi-tenant AI-powered customer support system with real-time chat, voice interaction, and knowledge-based automation for businesses.",
+  fullDescription:
+    "ConvoDesk AI is an advanced customer support platform built with Next.js and Convex that enables organizations to automate their entire customer interaction process. Each tenant gets a dedicated workspace with its own AI agent, knowledge base, and configurable chat widget that can be embedded seamlessly into any website. The system integrates VAPI for real-time AI voice support, allowing users to handle live voice conversations with natural language understanding. Clerk is used for secure multi-tenant authentication, while AWS Secrets Manager ensures secure handling of API keys and credentials. The RAG (Retrieval-Augmented Generation) pipeline powers intelligent, context-aware responses from each organization’s knowledge base, ensuring accurate and personalized customer interactions. Designed for scalability, ConvoDesk balances AI speed with human empathy and delivers a full-stack SaaS experience for support automation.",
+  images: [
+    "/convo1.png",
+    "/convo2.png",
+    "/convo3.png",
+  ],
+  technologies: [
+    "Next.js",
+    "Convex",
+    "TypeScript",
+    "Tailwind CSS",
+    "Clerk",
+    "VAPI (Voice AI)",
+    "AWS Secrets Manager",
+    "RAG Pipeline",
+    "OpenAI API"
+  ],
+  features: [
+    "Multi-tenant AI customer support system",
+    "Embeddable real-time chat and voice widget",
+    "VAPI voice integration for live AI voice conversations",
+    "RAG-powered organization-specific knowledge base",
+    "Clerk authentication and role-based access control",
+    "Secure key storage using AWS Secrets Manager",
+    "Real-time data sync and scalability via Convex",
+    "Modern, responsive dashboard for agents and admins"
+  ],
+  demoLink: "https://convodesk-dashboard.vercel.app",
+  githubLink: "https://github.com/prashantttzz/covodesk",
+  duration: "3 months",
+  role: "Full Stack Developer"
+},
+  {
+    id: 2,
     title: "AI-Based Resume Builder",
     category: "Web Application",
     description:
@@ -38,7 +77,7 @@ export const projects = [
     role: "Full Stack Developer",
   },
   {
-    id: 2,
+    id: 3,
     title: "Book Library Platform",
     category: "Web Application",
     description:
@@ -79,7 +118,7 @@ export const projects = [
     role: "lead Developer",
   },
   {
-    id: 3,
+    id: 4,
     title: "Anonymous Whistleblower Platform",
     category: "Web Application",
     description:
@@ -109,7 +148,7 @@ export const projects = [
     role: "lead Developer",
   },
   {
-    id: 4,
+    id: 5,
     title: "Cloud Storage Application",
     category: "Web Application",
     description:
@@ -139,7 +178,7 @@ export const projects = [
     role: "full stack developer",
   },
   {
-    id: 5,
+    id: 6,
     title: "AI Sketch to Image App",
     category: "Web Application",
     description:
@@ -162,7 +201,7 @@ export const projects = [
     role: "Full Stack Developer",
   },
   {
-    id: 6,
+    id: 7,
     title: "Social Media Platform",
     category: "Web Application",
     description:
@@ -193,7 +232,7 @@ export const projects = [
     role: "Lead Developer",
   },
   {
-    id: 7,
+    id: 8,
     title: "DevHack Landing page",
     category: "landing page",
     description: "An interactive landing page designed for a hackathon event.",
@@ -221,7 +260,7 @@ export const projects = [
     role: "Main Developer",
   },
   {
-    id: 8,
+    id: 9,
     title: "Portfolio Website",
     category: "landing page",
     description: "A visually dynamic 3D personal portfolio website.",

@@ -86,7 +86,7 @@ export default function ProjectDetail() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-[#1a1a1a]/80 backdrop-blur-sm rounded-2xl p-6 mb-6"
+              className="!bg-[#1a1a1a] glass rounded-2xl p-6 mb-6"
             >
               <h2 className="text-xl font-heading font-medium mb-3">Project Overview</h2>
               <p className="text-gray-300 leading-relaxed mb-4 text-sm">{project.fullDescription}</p>
@@ -121,7 +121,7 @@ export default function ProjectDetail() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-[#1a1a1a]/80 backdrop-blur-sm rounded-2xl p-6"
+              className="glass !bg-[#1a1a1a] rounded-2xl p-6"
             >
               <h2 className="text-xl font-heading font-medium mb-4">Project Gallery</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -161,7 +161,7 @@ export default function ProjectDetail() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-[#1a1a1a]/80 backdrop-blur-sm rounded-2xl p-6 sticky top-8"
+              className="!bg-[#1a1a1a] glass rounded-2xl p-6 sticky top-8"
             >
               <h2 className="text-lg font-heading font-medium mb-4">Project Details</h2>
 
@@ -197,7 +197,7 @@ export default function ProjectDetail() {
                         href={project.demoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-accent text-black font-medium py-2.5 px-3 rounded-lg flex items-center justify-center hover:bg-accent/90 transition-colors text-sm"
+                        className="flex-1 bg-accent text-black  rounded-3xl font-medium py-2.5 px-3  flex items-center justify-center hover:bg-accent/90 transition-colors text-sm"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
@@ -211,7 +211,7 @@ export default function ProjectDetail() {
                         href={project.githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-[#2a2a2a] text-white font-medium py-2.5 px-3 rounded-lg flex items-center justify-center hover:bg-[#333333] transition-colors text-sm"
+                        className="flex-1 bg-[#2a2a2a] glass-button text-white font-medium py-2.5 px-3 rounded-lg flex items-center justify-center hover:bg-[#333333] transition-colors text-sm"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >

@@ -7,6 +7,8 @@ import { ProjectsSection } from "@/components/projects-section"
 import { TechStackSection } from "@/components/tech-stack-section"
 import { ResumeSection } from "@/components/resume-section"
 import { AnimatePresence, motion } from "framer-motion"
+import { Dock } from "./ui/dock"
+import DockBox from "./Dockbox"
 
 export function MainContent() {
   const [activeSection, setActiveSection] = useState("about")
@@ -27,7 +29,7 @@ export function MainContent() {
   }
 
   return (
-    <div className="bg-[#1a1a1a]/90 backdrop-blur-sm rounded-3xl p-6 lg:p-8 min-h-[calc(100vh-4rem)]">
+    <div className="glass rounded-3xl p-6 lg:p-8 min-h-[calc(100vh-4rem)]">
       <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
 
       <AnimatePresence mode="wait">

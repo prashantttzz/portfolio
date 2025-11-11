@@ -103,12 +103,8 @@ export function AboutSection() {
         {services.map((service, index) => (
           <motion.div
             key={service.title}
-            className="bg-[#222222]/50 backdrop-blur-sm rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-all group"
+            className="glass rounded-2xl !bg-[#424141] p-6 transition-all group"
             variants={item}
-            whileHover={{
-              y: -8,
-              boxShadow: "0 20px 40px -10px rgba(255, 194, 84, 0.1)",
-            }}
           >
             <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
               <service.icon className="w-6 h-6 text-accent" />

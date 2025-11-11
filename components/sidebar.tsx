@@ -2,14 +2,10 @@
 
 import {
   Mail,
-  Phone,
-  MapPin,
   Download,
   Github,
   Linkedin,
   Twitter,
-  ArrowBigUpDash,
-  ArrowUpLeft,
   ArrowUpRight,
 } from "lucide-react";
 import Image from "next/image";
@@ -32,8 +28,7 @@ export function Sidebar() {
 
   return (
     <motion.div
-      className="bg-[#1a1a1a]/90 backdrop-blur-sm rounded-3xl p-6 lg:p-8 sticky top-32"
-      whileHover={{ boxShadow: "0 0 30px rgba(255, 194, 84, 0.1)" }}
+      className="glass rounded-3xl p-6 lg:p-8 sticky top-32"
       transition={{ duration: 0.3 }}
     >
       <div className="text-center mb-6">
@@ -43,7 +38,7 @@ export function Sidebar() {
           transition={{ duration: 0.3 }}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl" />
-          <div className="relative w-full h-full bg-[#2a2a2a] rounded-2xl p-3 flex items-center justify-center overflow-hidden">
+          <div className="relative w-full h-full glasvs-button !rounded-2xl p-3 flex items-center justify-center overflow-hidden">
             <Image
               src="/3d.png"
               alt="Profile"
@@ -84,7 +79,7 @@ export function Sidebar() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 bg-[#2a2a2a] rounded-xl flex items-center justify-center text-gray-400 hover:text-accent hover:bg-accent/10 transition-colors"
+              className="w-8 h-8 glass-button !rounded-xl flex items-center justify-center text-gray-400 hover:text-accent hover:bg-accent/10 transition-colors"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -104,7 +99,7 @@ export function Sidebar() {
             transition={{ delay: 0.5 + index * 0.1 }}
             whileHover={{ x: 5 }}
           >
-            <div className="w-10 h-10 bg-[#2a2a2a] rounded-xl flex items-center justify-center mr-3 group-hover:bg-accent/10 transition-colors">
+            <div className="w-10 h-10 glass-button !rounded-xl flex items-center justify-center mr-3 group-hover:bg-accent/10 transition-colors">
               <contact.icon className="w-4 h-4 text-accent" />
             </div>
             <div>
@@ -116,35 +111,38 @@ export function Sidebar() {
           </motion.div>
         ))}
       </div>
-<div className="space-y-5">
-  
-      <motion.button
-        className="w-full bg-gradient-to-r from-accent to-accent/80 text-black font-medium py-3 px-4 rounded-xl flex items-center justify-center hover:from-accent/90 hover:to-accent/70 transition-all text-sm"
-        whileHover={{ scale: 1.02, y: -2 }}
-        whileTap={{ scale: 0.98 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-      >
-        <a href="/prashant chouhan.pdf" download className="flex">
-          <Download className="w-4 h-4 mr-2" />
-          Download Resume
-        </a>
-      </motion.button>
-      <motion.button
-        className="w-full text-accent font-medium py-3 px-4 rounded-xl flex items-center justify-center hover:from-accent/90 hover:to-accent/70 transition-all text-sm"
-        whileHover={{ scale: 1.02, y: -2 }}
-        whileTap={{ scale: 0.98 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-      >
-        <a href="https://resumate-io.vercel.app/preview/prashant-resume" target="_blank"  className="flex">
-          <ArrowUpRight className="w-4 h-4 mr-2" />
-          Live Resume
-        </a>
-      </motion.button>
-</div>
+      <div className="space-y-5">
+        <motion.button
+          className="w-full bg-gradient-to-r from-accent to-accent/80 text-black font-medium py-3 px-4 rounded-xl flex items-center justify-center hover:from-accent/90 hover:to-accent/70 transition-all text-sm"
+          whileHover={{ scale: 1.02, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+        >
+          <a href="/prashant chouhan.pdf" download className="flex">
+            <Download className="w-4 h-4 mr-2" />
+            Download Resume
+          </a>
+        </motion.button>
+        <motion.button
+          className="w-full text-accent font-medium py-3 px-4 rounded-xl flex items-center justify-center hover:from-accent/90 hover:to-accent/70 transition-all text-sm"
+          whileHover={{ scale: 1.02, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+        >
+          <a
+            href="https://resumate-io.vercel.app/preview/prashant-resume"
+            target="_blank"
+            className="flex"
+          >
+            <ArrowUpRight className="w-4 h-4 mr-2" />
+            Live Resume
+          </a>
+        </motion.button>
+      </div>
     </motion.div>
   );
 }

@@ -160,7 +160,7 @@ export function ResumeSection() {
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                className="bg-[#1a1a1a]/60 backdrop-blur-sm rounded-2xl p-6 border border-[#2a2a2a]/50 hover:border-accent/30 transition-all"
+                className="!bg-[#414040] glass rounded-2xl p-6 transition-all"
                 variants={item}
                 whileHover={{ y: -2 }}
               >
@@ -250,7 +250,7 @@ export function ResumeSection() {
             {education.map((edu, index) => (
               <motion.div
                 key={index}
-                className="bg-[#1a1a1a]/60 backdrop-blur-sm rounded-2xl p-6 border border-[#2a2a2a]/50 hover:border-accent/30 transition-all"
+                className="!bg-[#414040] glass rounded-2xl p-6 transition-all"
                 variants={item}
                 whileHover={{ y: -2 }}
               >
@@ -280,7 +280,7 @@ export function ResumeSection() {
                       edu.coursework.map((course, idx) => (
                         <span
                           key={idx}
-                          className="bg-[#2a2a2a] text-gray-300 px-2 py-1 rounded-full text-xs"
+                          className="glass-button  text-white p-2  rounded-full text-xs"
                         >
                           {course}
                         </span>
@@ -321,7 +321,7 @@ export function ResumeSection() {
             {volunteerWork.map((vol, index) => (
               <motion.div
                 key={index}
-                className="bg-[#1a1a1a]/60 backdrop-blur-sm rounded-2xl p-6 border border-[#2a2a2a]/50 hover:border-accent/30 transition-all"
+                className=" !bg-[#414040] glass rounded-2xl p-6 transition-all"
                 variants={item}
                 whileHover={{ y: -2 }}
               >

@@ -1,20 +1,22 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Sidebar } from "@/components/sidebar"
-import { MainContent } from "@/components/main-content"
-import { motion } from "framer-motion"
+import { useState, useEffect } from "react";
+import { Sidebar } from "@/components/sidebar";
+import { MainContent } from "@/components/main-content";
+import { motion } from "framer-motion";
+import DockBox from "@/components/Dockbox";
+import ColorToggle from "@/components/ColorToggle";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 1200)
+      setIsLoading(false);
+    }, 1200);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   if (isLoading) {
     return (
@@ -46,14 +48,18 @@ export default function Home() {
           />
         </motion.div>
       </div>
-    )
+    );
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#121212] to-[#1a1a1a] text-white">
+    <main className=" min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#121212] to-[#1a1a1a] text-white">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 xl:grid-cols-[380px_1fr] gap-8">
-          <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <Sidebar />
           </motion.div>
           <motion.div
@@ -65,6 +71,9 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
+      <div className="fixed  w-full flex items-center justify-center bottom-5">
+        <ColorToggle />
+      </div>
     </main>
-  )
+  );
 }
