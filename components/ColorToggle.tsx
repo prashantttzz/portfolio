@@ -40,8 +40,8 @@ const ColorRadio = () => {
   }, [selected]);
 
   return (
-    <StyledWrapper count={displayedColors.length}>
-      <div className="glass-radio-group">
+    <StyledWrapper count={displayedColors.length} className=" !z-10 ">
+      <div className="glass-radio-group z-10">
         {displayedColors.map((color, index) => (
           <React.Fragment key={color.name}>
             <input

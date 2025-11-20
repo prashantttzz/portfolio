@@ -28,7 +28,7 @@ export function Sidebar() {
 
   return (
     <motion.div
-      className="glass rounded-3xl p-6 lg:p-8 sticky top-32"
+      className="glass rounded-3xl p-6 lg:p-8 sticky z-40 top-32"
       transition={{ duration: 0.3 }}
     >
       <div className="text-center mb-6">
@@ -125,23 +125,20 @@ export function Sidebar() {
             Download Resume
           </a>
         </motion.button>
-        <motion.button
-          className="w-full text-accent font-medium py-3 px-4 rounded-xl flex items-center justify-center hover:from-accent/90 hover:to-accent/70 transition-all text-sm"
-          whileHover={{ scale: 1.02, y: -2 }}
-          whileTap={{ scale: 0.98 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-        >
-          <a
-            href="https://resumate-io.vercel.app/preview/prashant-resume"
-            target="_blank"
-            className="flex"
-          >
-            <ArrowUpRight className="w-4 h-4 mr-2" />
-            Live Resume
-          </a>
-        </motion.button>
+<motion.a
+  href="https://resumate-io.vercel.app/preview/prashant-resume"
+  target="_blank"
+  className="w-full text-accent font-medium py-3 px-4 cursor-pointer rounded-xl flex items-center  z-40 justify-center hover:from-accent/90 hover:to-accent/70 transition-all text-sm"
+  whileHover={{ scale: 1.02, y: -2 }}
+  whileTap={{ scale: 0.98 }}
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.8 }}
+>
+  <ArrowUpRight className="w-4 h-4 mr-2" />
+  Live Resume
+</motion.a>
+
       </div>
     </motion.div>
   );
